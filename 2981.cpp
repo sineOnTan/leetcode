@@ -1,12 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-
-
-#include <bits/stdc++.h>
-using namespace std;
-
-
+// Small constraints so could be brute forced and calculated.
 
 class Solution {
 public:
