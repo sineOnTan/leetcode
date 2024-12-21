@@ -13,18 +13,14 @@ public:
     vector<int> children[N];
     long long div;
 
-    void dfs(long long n, long long from = -1) {
+    long long dfs(long long n, long long from = -1) {
+        long long temp = vals[n];
         for (auto i : graph_edges[n]) {
             if (i != from) {
                 children[n].push_back(i);
-                dfs(i, n);
+                temp += dfs(i, n);
             }
         }
-    }
-
-    long long get_subtree_size(long long n) {
-        long long temp = vals[n];
-        for (auto i : children[n]) temp += get_subtree_size(i);
         if (temp % div == 0) res++;
         return temp % div;
     }
@@ -42,7 +38,6 @@ public:
         }
 
         dfs(0);
-        get_subtree_size(0);
         return res;
     }
 };
