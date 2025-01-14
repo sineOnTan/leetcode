@@ -19,5 +19,6 @@ public:
                 else res += 2;
             }
         }
+        return res;
     }
 };
