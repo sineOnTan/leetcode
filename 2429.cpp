@@ -7,12 +7,12 @@ public:
         int res = num1;
         cout << __builtin_popcount(num2) << " " << __builtin_popcount(num1) << endl;
         if (__builtin_popcount(num2) < __builtin_popcount(num1)) {
-            for (int i = 0; i <= 31; i++) {
+            for (int i = 0; i <= 30; i++) {
                 if ((res & (1 << i)) != 0) res &= ~(1 << i);
                 if (__builtin_popcount(num2) == __builtin_popcount(res)) return res;
             }
         } else if (__builtin_popcount(num2) > __builtin_popcount(num1)) {
-            for (int i = 31; i >= 0; i--) {
+            for (int i = 0; i <= 30; i++) {
                 if ((res & (1 << i)) == 0) res |= (1 << i);
                 if (__builtin_popcount(num2) == __builtin_popcount(res)) return res;
             }
