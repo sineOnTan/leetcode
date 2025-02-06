@@ -12,5 +12,6 @@ public:
         if (pos.size() != 2) return false;
         
         swap(s2[pos[1]], s2[pos[0]]);
+        return s1 == s2;
     }
 };
