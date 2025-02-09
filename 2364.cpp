@@ -11,6 +11,6 @@ public:
             res += m[nums[i] - i];
             m[nums[i] - i]++;
         }
-        return res;
+        return (nums.size() * (nums.size() - 1) / 2) - res;
     }
 };
