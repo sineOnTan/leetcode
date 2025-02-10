@@ -15,7 +15,7 @@ class NumberContainers {
         }
         
         int find(int number) {
-            if(positions[number].size() == 0)
+            if(positions[number].size() == 0) return -1;
             return *positions[number].begin();
         }
 
