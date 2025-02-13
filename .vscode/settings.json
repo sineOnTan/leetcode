@@ -15,6 +15,9 @@
         "span": "cpp",
         "regex": "cpp",
         "valarray": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp",
+        "iostream": "cpp"
     }
 }
