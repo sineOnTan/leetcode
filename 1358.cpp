@@ -11,7 +11,7 @@ class Solution {
             int res = 0;
             while (b_index != s.size()) {
                 if (a[0] >= 1 and a[1] >= 1 and a[2] >= 1) {
-                    res += s.size() - f_index;
+                    res += s.size() - f_index + 1;
                     a[s[b_index] - 'a']--;
                     b_index++;
                 } else {
@@ -21,7 +21,7 @@ class Solution {
                         f_index++;
                     }
                     if (f_index >= s.size() and (a[0] < 1 or a[1] < 1 or a[2] < 1)) break;
-                    res += s.size() - f_index;
+                    res += s.size() - f_index + 1;
                     a[s[b_index] - 'a']--;
                     b_index++;
                 }
