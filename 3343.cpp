@@ -30,7 +30,7 @@ class Solution {
 
             int res = a[num.size()/2][sum/2];
 
-            for (int i = 0; i < num.size()/2; i++) {
+            for (int i = 1; i < num.size()/2; i++) {
                 res *= i;
                 res %= MOD;
             }
@@ -39,7 +39,7 @@ class Solution {
                 res *= (num.size() / 2) + 1;
                 res %= MOD;
             }
-            
-            return a[num.size()/2][sum/2];
+
+            return res;
         }
     };
