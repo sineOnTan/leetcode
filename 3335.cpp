@@ -1,7 +1,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-const int MOD = 10e9 + 7;
+const long long MOD = 1e9 + 7;
 
 class Solution {
 public:
