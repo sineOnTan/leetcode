@@ -13,5 +13,6 @@ public:
                 res.push_back(words[i]);
             }
         }
+        return res;
     }
 };
