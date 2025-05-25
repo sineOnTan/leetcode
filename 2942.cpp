@@ -8,5 +8,6 @@ public:
         for (int i = 0; i < words.size(); i++) {
             if (words[i].contains(x)) res.push_back(i);
         }
+        return res;
     }
 };
