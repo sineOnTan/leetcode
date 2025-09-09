@@ -4,10 +4,14 @@ using namespace std;
 class Solution {
 public:
     int makeTheIntegerZero(int num1, int num2) {
-        for (int i = 1; num1 >= 0; i++) {
-            num1 -= num2;
-            cout << __builtin_popcount(num1) << " " << i << endl;
-            if (__builtin_popcount(num1) == i) return i;
+        long long num = num1;
+        for (int i = 1; num >= 0; i++) {
+            num -= num2;
+            int count = 0;
+            for (int i = 0; i < 60; i++) {
+                if ((long long)1 << i && num != 0) count += i + 1;
+            }
+            if (__builtin_popcount(num) <= i and count <= i and num >= i) return i;
         }
         return -1;
     }
