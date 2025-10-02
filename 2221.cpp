@@ -12,7 +12,7 @@ public:
                 next.push_back(temp[i] + temp[i + 1]);
             }
             swap(next,temp);
-            next.clear()
+            next.clear();
         }
         return temp[0];
     }
