@@ -4,11 +4,11 @@ using namespace std;
 class Solution {
 public:
     int swimInWater(vector<vector<int>>& grid) {
-        for (int i = 1; i <= grid.size() * grid.size() + 1; i++) {
+        for (int i = 0; i <= grid.size() * grid.size() + 1; i++) {
             set<pair<int,int>> seen;
             queue<pair<int,int>> q;
 
-            if (grid[0][0] <= i) {seen.emplace(0,0); q.emplace(0,0);}
+            if (grid[0][0] <= i) {q.emplace(0,0);}
 
             while(q.size() != 0) {
                 auto cur = q.front();
