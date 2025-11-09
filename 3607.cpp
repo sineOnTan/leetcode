@@ -7,7 +7,7 @@ int p[N];
 
 int parent(int i) {
     if (p[i] == i) return i;
-    cout << i << " " << p[i] << endl;
+
     p[i] = parent(p[i]);
     return p[i];
 }
