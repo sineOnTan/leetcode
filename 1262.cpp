@@ -15,14 +15,14 @@ public:
         }
         sort(ones.begin(), ones.end());
         sort(twos.begin(), twos.end());
-
         int res = 0;
-        if (sum % 3 == 1) return sum - ones[0];
-        else if (sum % 3 == 2) {
+        if (sum % 3 == 1) {
+            if (ones.size() >= 1) res = max(res, sum - ones[0]);
+            if (twos.size() >= 2) res = max(res, sum - twos[0] - twos[1]);
+        } else if (sum % 3 == 2) {
             if (ones.size() >= 2) res = max(res, sum - ones[0] - ones[1]);
             if (twos.size() >= 1) res = max(res, sum - twos[0]);
-            return res;
-        }
+        } else return sum;
         return res;
     }
 };
