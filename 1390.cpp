@@ -10,9 +10,10 @@ public:
             int count_nums = 0;
             int sum = 0;
 
-            for (int j = 1; j * j < i ; j++) {
+            for (int j = 1; j * j <= i ; j++) {
                 if (i % j == 0) {
                     count_nums += 2;
+                    if (j == i / j) count_nums = 10;
                     sum += j;
                     sum += i / j;
                 }
