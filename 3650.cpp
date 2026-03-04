@@ -32,7 +32,7 @@ public:
                 pq.emplace(i.second + dist, i.first);
             }
         }
-        if (min_cost[n - 1] == int)
+        if (min_cost[n - 1] == INT_MAX) return -1;
         return min_cost[n - 1];
     }
 };
