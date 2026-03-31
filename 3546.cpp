@@ -24,7 +24,7 @@ public:
 
         temp_sum = 0;
         for (int i = 0; i < grid[0].size(); i++) {
-            for (int j = 0; j < grid.size(); i++) {
+            for (int j = 0; j < grid.size(); j++) {
                 temp_sum += grid[j][i];
             }
             if (temp_sum * 2 == sum) return true;
